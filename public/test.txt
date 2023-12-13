@@ -1,0 +1,49 @@
+*   Trying 104.17.75.195:443...
+* Connected to api-preprod.phonepe.com (104.17.75.195) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*  CAfile: \xampp\apache\bin\curl-ca-bundle.crt
+*  CApath: none
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: CN=*.phonepe.com
+*  start date: Aug  9 04:10:25 2023 GMT
+*  expire date: Aug  8 04:03:12 2024 GMT
+*  subjectAltName: host "api-preprod.phonepe.com" matched cert's "*.phonepe.com"
+*  issuer: C=US; ST=Arizona; L=Scottsdale; O=GoDaddy.com, Inc.; OU=http://certs.godaddy.com/repository/; CN=Go Daddy Secure Certificate Authority - G2
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x26262377cc0)
+> POST /apis/pg-sandbox/pg/v1/pay HTTP/2
+Host: api-preprod.phonepe.com
+accept: */*
+content-type:application/json
+x-verify:98e8ee7a2def318b45579ef1d80791a290d154e9228800f7dfc912c7ade5f5ae###1
+content-length: 434
+
+* We are completely uploaded and fine
+* old SSL session ID is stale, removing
+< HTTP/2 401 
+< date: Fri, 24 Nov 2023 11:26:18 GMT
+< content-type: application/json
+< content-length: 30
+< access-control-allow-headers: Cache-Control,If-Modified-Since,Pragma,Content-Type,Authorization,X-Requested-With,Content-Length,Accept,Origin
+< access-control-allow-methods: OPTIONS,GET,PUT,POST,DELETE,HEAD
+< access-control-allow-origin: *
+< x-api-exception-code: R018
+< x-request-backend-time: 1700825177968
+< x-requested-method: POST
+< x-response-backend-time: 1700825178059
+< x-frame-options: DENY
+< x-content-type-options: nosniff
+< x-xss-protection: 1; mode=block
+< strict-transport-security: max-age=0; includeSubDomains; preload
+< cf-cache-status: DYNAMIC
+< server: cloudflare
+< cf-ray: 82b14bd1d9be859c-BOM
+< 
+* Connection #0 to host api-preprod.phonepe.com left intact
